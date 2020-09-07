@@ -10,7 +10,7 @@ $message=$_POST['message'];
 
 // Modify the path in the require statement below to refer to the 
 // location of your Composer autoload.php file.
-require '../vendor/autoload.php';
+require './vendor/autoload.php';
 
 // Instantiate a new PHPMailer 
 $mail = new PHPMailer;
@@ -27,9 +27,9 @@ $mail->setFrom('acallies15@apu.edu', 'New Home Realty  Admin');
 // is still in the sandbox, this address must be verified.
 
 
-//$mail->addAddress('acallies15@apu.edu', 'Adrian Callies');// Remove and change after beta
-$mail->addAddress('Arcallies@aol.com', 'Arlington Callies');
-$mail->addAddress('newhomerealty@aol.com', 'Pamela Callies');
+$mail->addAddress('acallies15@apu.edu', 'Adrian Callies');// Remove and change after beta
+//$mail->addAddress('Arcallies@aol.com', 'Arlington Callies');
+//$mail->addAddress('newhomerealty@aol.com', 'Pamela Callies');
 
 // Replace smtp_username with your Amazon SES SMTP user name.
 $mail->Username = 'AKIA4HJMF54KVEZ37AGP';
@@ -51,7 +51,7 @@ $mail->Subject = 'New Home Realty Website: New Message!';
 
 // The HTML-formatted body of the email
 $mail->Body = "<h1>Someone has contacted New Home Realty!</h1>
-<p>The person who has contacted you is named,"." ".$name.". The following message is below:</p><br>
+<p>The person who has contacted you is named,"." ".$fname.". The following message is below:</p><br>
 <i>"." ".$message. " <b>Please respond at to the following address:<i>".$email;
 
 
