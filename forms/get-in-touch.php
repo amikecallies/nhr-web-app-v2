@@ -1,4 +1,4 @@
-<?php
+<?php header("Location: ../form-submit.html");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -27,9 +27,9 @@ $mail->setFrom('acallies15@apu.edu', 'New Home Realty  Admin');
 // is still in the sandbox, this address must be verified.
 
 
-//$mail->addAddress('acallies15@apu.edu', 'Adrian Callies');// Remove and change after beta
-$mail->addAddress('Arcallies@aol.com', 'Arlington Callies');
-$mail->addAddress('newhomerealty@aol.com', 'Pamela Callies');
+$mail->addAddress('acallies15@apu.edu', 'Adrian Callies');// Remove and change after beta
+//$mail->addAddress('Arcallies@aol.com', 'Arlington Callies');
+//$mail->addAddress('newhomerealty@aol.com', 'Pamela Callies');
 
 // Replace smtp_username with your Amazon SES SMTP user name.
 $mail->Username = 'AKIA4HJMF54KVEZ37AGP';
@@ -73,12 +73,10 @@ $mail->AltBody = "Email Test\r\nThis email was sent through the
     Amazon SES SMTP interface using the PHPMailer class.";
 
 
-// Change UX Design
+//  Redirect to the home page and confirm email submission
 if(!$mail->send()) {
     echo "Email not sent. " , $mail->ErrorInfo , PHP_EOL;
 } else {
-    $messageconfirmed = "Your message was succesfully sent!";
-    echo "<script type='text/javascript'>alert('$messageconfirmed');</script>";
-    echo "<script type='text/javascript'>window.location='index.html';</script>";
+    echo "Email was successfully sent!";
 }
 ?>
