@@ -1894,3 +1894,23 @@ h1, h2, h3, h4, h5,
     @media (max-width: 991.98px) {
       .first-step:after, .second-step:after {
         display: none; } }
+
+  .about-nav {
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 2px;
+  }
+
+  .img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
