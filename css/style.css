@@ -1895,14 +1895,14 @@ h1, h2, h3, h4, h5,
       .first-step:after, .second-step:after {
         display: none; } }
 
-  .about-nav {
+  .register-nav {
     list-style-type: none;
-    text-align: left;
+    text-align: center;
     margin: 0;
     padding: 0;
   }
 
-  .about-nav li {
+  .register-nav li {
     display: inline-block;
     font-size: 20px;
     padding: 2px;
