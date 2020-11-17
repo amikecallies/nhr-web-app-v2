@@ -64,7 +64,7 @@ $mail->Password = 'BNcRpp8C/A/RZir6DcYV20lL0V7oJoOxdjA+KEj9kiB8';
 $mail->Host = 'email-smtp.us-west-2.amazonaws.com';// May be subject to change since most emails will be sent in the Texas Area
 
 // The subject line of the email
-$mail->Subject = 'New Home Realty Website: New Message!';
+$mail->Subject = 'New Home Realty Website: New Form Submission!';
 
 // The HTML-formatted body of the email
 $mail->Body = "<h1>Someone has submitted a new Buyer's Form at New Home Realty!</h1>
