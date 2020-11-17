@@ -27,9 +27,9 @@ $mail->setFrom('acallies15@apu.edu', 'New Home Realty  Admin');
 // is still in the sandbox, this address must be verified.
 
 
-$mail->addAddress('acallies15@apu.edu', 'Adrian Callies');// Remove and change after beta
-//$mail->addAddress('Arcallies@aol.com', 'Arlington Callies');
-//$mail->addAddress('newhomerealty@aol.com', 'Pamela Callies');
+//$mail->addAddress('acallies15@apu.edu', 'Adrian Callies'); Use this email only for testing this feature
+$mail->addAddress('Arcallies@aol.com', 'Arlington Callies');
+$mail->addAddress('newhomerealty@aol.com', 'Pamela Callies');
 
 // Replace smtp_username with your Amazon SES SMTP user name.
 $mail->Username = 'AKIA4HJMF54KVEZ37AGP';
