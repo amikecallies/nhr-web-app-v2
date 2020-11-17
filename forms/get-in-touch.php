@@ -1,4 +1,4 @@
-<?php header("Location: ../form-submit.html");
+<?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -78,6 +78,6 @@ $mail->AltBody = "Email Test\r\nThis email was sent through the
 if(!$mail->send()) {
     echo "Email not sent. " , $mail->ErrorInfo , PHP_EOL;
 } else {
-    echo "Email was successfully sent!";
+    header("Location: ../form-submit.html");
 }
 ?>
