@@ -51,7 +51,7 @@ $mail->Subject = 'New Home Realty Website: New Message!';
 
 // The HTML-formatted body of the email
 $mail->Body = "<h1>Someone has contacted New Home Realty!</h1>
-<p>The person who has contacted you is named,"." ".$name.". The following message is below:</p><br>
+<p>".$fname." ".$lname." has contacted you. The following message is below:</p><br>
 <i>"." ".$message. " <b>Please respond at to the following address:<i>".$email;
 
 
