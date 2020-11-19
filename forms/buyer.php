@@ -49,10 +49,10 @@ $mail->addAddress('Arcallies@aol.com', 'Arlington Callies');
 $mail->addAddress('newhomerealty@aol.com', 'Pamela Callies');
 
 // Replace smtp_username with your Amazon SES SMTP user name.
-$mail->Username = 'AKIA4HJMF54KTMZFWXP5';
+$mail->Username = 'AKIA4HJMF54KR6RMZO7G';
 
 // Replace smtp_password with your Amazon SES SMTP password.
-$mail->Password = '9EUIMNf23/SfwQQUOP6UFsDeGGI4JzhfkRqY5lZe';
+$mail->Password = 'BIaPiubigPTFVZS6+vl90lygXYC4pn8XrkT++DfgaSkI';
     
 // Specify a configuration set. If you do not want to use a configuration
 // set, comment or remove the next line.
