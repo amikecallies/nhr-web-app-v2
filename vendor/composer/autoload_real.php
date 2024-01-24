@@ -22,31 +22,14 @@ class ComposerAutoloaderInitac3152123ba0b356713b6b18b19996e3
             return self::$loader;
         }
 
+        require __DIR__ . '/platform_check.php';
+
         spl_autoload_register(array('ComposerAutoloaderInitac3152123ba0b356713b6b18b19996e3', 'loadClassLoader'), true, true);
-        self::$loader = $loader = new \Composer\Autoload\ClassLoader();
+        self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(__DIR__));
         spl_autoload_unregister(array('ComposerAutoloaderInitac3152123ba0b356713b6b18b19996e3', 'loadClassLoader'));
 
-        $useStaticLoader = PHP_VERSION_ID >= 50600 && !defined('HHVM_VERSION') && (!function_exists('zend_loader_file_encoded') || !zend_loader_file_encoded());
-        if ($useStaticLoader) {
-            require_once __DIR__ . '/autoload_static.php';
-
-            call_user_func(\Composer\Autoload\ComposerStaticInitac3152123ba0b356713b6b18b19996e3::getInitializer($loader));
-        } else {
-            $map = require __DIR__ . '/autoload_namespaces.php';
-            foreach ($map as $namespace => $path) {
-                $loader->set($namespace, $path);
-            }
-
-            $map = require __DIR__ . '/autoload_psr4.php';
-            foreach ($map as $namespace => $path) {
-                $loader->setPsr4($namespace, $path);
-            }
-
-            $classMap = require __DIR__ . '/autoload_classmap.php';
-            if ($classMap) {
-                $loader->addClassMap($classMap);
-            }
-        }
+        require __DIR__ . '/autoload_static.php';
+        call_user_func(\Composer\Autoload\ComposerStaticInitac3152123ba0b356713b6b18b19996e3::getInitializer($loader));
 
         $loader->register(true);
 
